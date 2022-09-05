@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>--Viagem de Carro--</title>
+<meta charset="utf-8" />
+</head>
+
+<body>
+<form name="meu_form">
+
+  <h1 style="text-align: center">Viagem de Carro</h1>
+
+  <h1>Carro</h1>
+  
+  <label for="modelo">Modelo</label>
+  <input type="text" id="modeloid" required="required" name="modelo" />
+  
+  <label for="placa">Placa</label>
+  <input type="text" id="placaid" required="required" name="placa" />
+
+
+  <h1>Motorista</h1>
+
+  <label for="nome">Nome</label>
+  <input type="text" id="nomeid" required="required" name="nome" />
+
+  <h1>Viagem</h1>
+
+  <label for="localdeorigem">Local de Origem</label>
+  <input type="text" id="localdeorigemid" required="required" name="localdeorigem" />
+
+  <label for="localdedestino">Local de Destino</label>
+  <input type="text" id="localdedestinoid" required="required" name="localdedestino" />
+ 
+  <label for="kmpercorrida">Kilometragem Percorrida</label>
+  <input type="text" id="kmpercorridaid" required="required" name="kmpercorrida" />
+  
+  <br><br>
+  <label for="litrosgasto">Litros de combustível gastos</label>
+  <input type="text" id="litrosgastosid" required="required" name="litrosgastos" />
+  
+  <label for="valoratual">Valor do Combustível atual</label>
+  <input type="text" id="valoratualid" required="required" name="valoratual" />
+  
+<br>
+  <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+</form>
+</body>
+
+<script>
+ var autonomia, valorkm, valortotal;
+  autonomia = kmpercorrida/litrosgastos;
+  valorkm = autonomia*valoratual;
+  valortotal = kmpercorrida*valorkm
+  document.getElementById("demo").innerHTML = autonomia;
+  document.getElementById("demo").innerHTML = valorkm;
+  document.getElementById("demo").innerHTML = valoratual;
+</script>
+
+</html>
